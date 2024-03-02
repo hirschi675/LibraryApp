@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+// This should be changed to the github page that holds the code?
+package com.loganhirschi.dev;
+
+
+// This is my library/shelf service
+service Library {
+  rpc AddBook (Book) returns (BookStatusResponse);
+  rpc ChangeBook (Book) returns (BookStatusResponse);
+  rpc GetBook (BookRequest) returns (Book);
+  rpc RemoveBook (BookRequest) returns (BookStatusResponse);
+}
+
+
+// A book with all the information inside
+message Book {
+  int64 id = 1;
+  string title = 2;
+  string author = 3;
+  string text = 4;
+  string color = 5;
+}
+
+// Request just needs the id of the book you want to get
+message BookRequest {
+  int64 id = 1;
+}
+
+// Responses with a 200 if successful
+message BookStatusResponse {
+  string id = 1;
+  string status = 2;
+}

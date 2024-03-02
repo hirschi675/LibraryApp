@@ -1,0 +1,14 @@
+.main-wrapper {
+  background-color: rgb(141, 71, 23);
+  border: solid 10px rgb(183, 119, 51);
+  margin-top: 10px;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.book-div-text {
+  background-color: rgb(0, 140, 255);
+  border: solid 2px rgb(141, 71, 23);
+  height: 196px;
+}
